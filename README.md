@@ -6,3 +6,5 @@
 4. Password Manager
 5. Dice Game
 6. Timed Math Challenge
+7. Slot Machine
+8. Turtle Race
