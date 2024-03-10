@@ -8,3 +8,9 @@
 6. Timed Math Challenge
 7. Slot Machine
 8. Turtle Race
+9. Word Per Minute Typing Test
+10. Timer
+11. Password Generator
+12. Shortest Path Finder
+13. YouTube Video Downloader
+14. Mastermind
