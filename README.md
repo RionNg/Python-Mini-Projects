@@ -14,3 +14,5 @@
 12. Shortest Path Finder
 13. YouTube Video Downloader
 14. Mastermind
+15. GUI Calculator
+16. Sudoku Solver
