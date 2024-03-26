@@ -1,36 +1,38 @@
 import random
 
-top_of_range = input("Enter a number: ")
+user_input = input("Press any key to continue or 'q' to quit: ")
+if user_input == "q":
+    raise SystemExit("Bye!!")
 
-if top_of_range.isdigit():
+bot_of_range = input("Please enter the min number: ")
+top_of_range = input("Please enter the max number: ")
+if bot_of_range.isdigit() and top_of_range.isdigit():
+    bot_of_range = int(bot_of_range)
     top_of_range = int(top_of_range)
 
-    if top_of_range <= 0:
-        print("Please enter a number larger than 0.")
-        quit()
-else:
-    print("Please enter a number.")
-    quit()
+    if bot_of_range <= 0 and top_of_range <= 0:
+        print("Please enter valid numbers.")
 
-random_number = random.randint(0, top_of_range)
+random_number = random.randint(bot_of_range, top_of_range)
 guesses = 0
 
 while True:
     guesses += 1
-    user_guess = input("Make a guess: ")
+    guess = input(
+        f"Please guess the number in between {bot_of_range} and {top_of_range}: "
+    )
+    if guess.isdigit():
+        guess = int(guess)
 
-    if user_guess.isdigit():
-        user_guess = int(user_guess)
-    else:
-        print("Please enter a number.")
-        continue
+    if guess == "q":
+        raise SystemExit("Bye!")
 
-    if user_guess == random_number:
-        print(f"You got it! The number is {random_number}.")
+    if guess == random_number:
+        print(f"You guessed the number! The number is {random_number}.")
         break
-    elif user_guess > random_number:
-        print("You were above the number!")
+    elif guess > random_number:
+        print("You are above the number.")
     else:
-        print("You were below the number!")
+        print("You are below the number.")
 
-print(f"You got it in {guesses} guesses.")
+print(f"You guessed the number in {guesses} times.")
